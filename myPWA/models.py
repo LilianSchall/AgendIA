@@ -1,4 +1,6 @@
 from django.db import models
+import datetime
+from django.utils import timezone
 
 
 class Task(models.Model):
@@ -6,3 +8,5 @@ class Task(models.Model):
     beginning = models.DateTimeField()
     ending = models.DateTimeField()
 
+    def __str__(self):
+        return self.title
